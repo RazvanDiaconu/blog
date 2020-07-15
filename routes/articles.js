@@ -1,8 +1,12 @@
 const express=require('express')
+const { response } = require('express')
 const router=express.Router()
 
 
-router.get('/',(request,response)=>{
-    response.send("Hello Nigga 2")
+router.get('/new',(request,response)=>{
+    response.render('articles/new')
 })
-module.exports=router 
+module.exports=router
+router.post('/',(request,response)=>{
+    
+})

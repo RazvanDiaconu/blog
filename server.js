@@ -5,11 +5,11 @@ app.set('view engine','ejs')
 app.use('/articles',articleRouter)
 const articles=[{
     title:'test',
-    createdAt:Date.now(),
+    createdAt:new Date(),
     description:'test description'
 }]
 app.get('/',(request,response)=>{
-    response.render('index',{articles:articles})
+    response.render('articles/index',{articles:articles})
 
 })
 app.listen(5000)
