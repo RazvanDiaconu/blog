@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
+    crossorigin="anonymous">
+
+    <title>Hello World</title>
+</head>
+<body>
+    <div class="container">
+         <h1 class="mb-4">Blog Articles</h1>
+         <a href="/articles/new" class="btn btn-success">New Article</a>
+
+         <% articles.forEach( article => { %>
+            <div class="card-body mt-4" >
+                <div class="card-body">
+                     <div class="card-title"><%=article.title %></div>
+                </div>
+            </div>
+ 
+        <% })%>
+    </div>
+</body>
+</html>
