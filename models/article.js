@@ -1,5 +1,5 @@
 const mongoose =require('mongoose')
- const articleSchema=mongoose.Schema(
+ const articleSchema=new mongoose.Schema(
      {
          title:{
              type:String,

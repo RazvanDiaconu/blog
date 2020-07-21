@@ -1,13 +1,15 @@
 const express= require('express')
 const mongoose= require('mongoose')
-mongoose.connect('mongodb://localhost:27017/test', {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect('mongodb://localhost/blog2', {
+  useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
+})
 const app=express()
 const articleRouter=require('./routes/articles')
 
 
  
 app.set('view engine','ejs')
-app.use(express.urlencoded({extended:false}))
+app.use(express.urlencoded({extended:false})) 
 
 
 const articles=[{
@@ -20,4 +22,4 @@ app.get('/',(request,response)=>{
 
 })
 app.use('/articles',articleRouter)
-app.listen(5000)
+app.listen(5001)
